@@ -1,4 +1,4 @@
-The mod allows you to configure up to 4 slots for each city dwelling.
+### The mod allows you to configure up to 4 slots for each city dwelling.
 Each slot can be either an alternative creature or an additional one.
 
 The alternate creature uses the same population counter as the native creature. However, an arbitrary ratio between the original number of creatures and the alternative can be specified.
@@ -19,13 +19,17 @@ It is recommended, if possible, to still use the new API for more accurate and s
 auto-growing population.
 
 Example:
+```
 !?FU(OnAfterErmInstructions);
 !!re i/0/8:;
  !!FU(dex_SetDwellingSlotByTownType):Pi/0/0/2/120/-1007;
 !!en:;
+```
 For each type of city, assigns an additional slot to an unimproved dwelling of the 1st level with an auto-growing population of 7 psych. elementals per week (14 with castle, 21 with Grail).
+```
 !?FU(OnAfterErmInstructions);
 !!re i/0/8:;
  !!FU(dex_SetDwellingSlotByTownType):Pi/0/0/2/120/5;
 !!en:;
+```
 Same thing, but elementals are ALTERNATIVES to siblings and can be recruited at a rate of 1 elemental instead of 20 siblings (5% = 1/20).
